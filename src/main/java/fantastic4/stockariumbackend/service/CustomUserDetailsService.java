@@ -1,9 +1,12 @@
 package fantastic4.stockariumbackend.service;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CustomUserDetailsService implements UserDetailsService {
 
     private final fantastic4.stockariumbackend.repository.UserRepository userRepository;
