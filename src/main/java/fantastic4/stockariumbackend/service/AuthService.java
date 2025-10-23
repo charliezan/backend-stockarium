@@ -28,7 +28,7 @@ public class AuthService {
         user.setEmail(request.getEmail());
         //hash de password
         user.setPassword(passwordEncoder.encode(request.getPassword()));
-        user.setAdmin(true);
+        user.setAdmin(request.isAdmin());
         return userRepository.save(user);
     }
 }

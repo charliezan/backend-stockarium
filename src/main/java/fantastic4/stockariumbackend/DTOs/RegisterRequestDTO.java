@@ -18,6 +18,9 @@ public class RegisterRequestDTO {
             message = "La contraseña debe tener mínimo 8 caracteres, al menos una mayúscula, un número y un carácter especial.")
     private String password;
 
+    @NotBlank
+    private boolean admin;
+
     public String getUsername() {
         return username;
     }
@@ -40,5 +43,13 @@ public class RegisterRequestDTO {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public boolean isAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(boolean admin) {
+        this.admin = admin;
     }
 }
