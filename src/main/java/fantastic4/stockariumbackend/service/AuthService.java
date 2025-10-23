@@ -4,7 +4,9 @@ import fantastic4.stockariumbackend.DTOs.RegisterRequestDTO;
 import fantastic4.stockariumbackend.model.User;
 import fantastic4.stockariumbackend.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
 
+@Component
 public class AuthService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
